@@ -17,7 +17,7 @@ Sum of colors with openCV and python
 - 2 GB or more RAM.
 - At least 10 MB Free Disk space
 - Windows 7 or later, OS X 10.8 or later (has only been tested on 10.9), Linux 3.0+
-- openCV 2.8 to 3.2
+- openCV 3.2.0
 
 # Installation
 First you must install the following libraries on your computer
