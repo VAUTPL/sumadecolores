@@ -1,10 +1,25 @@
+##################################################
+#     UNIVERSIDAD TECNICA PARTICULAR DE LOJA     #
+##################################################
+# Profesor:            	Rodrigo Barba  			 #
+# Rodrigo Barba	     	lrbarba@utpl.edu.ec      #
+##################################################
+# Estudiante:				         #
+# Ruben Baez     	rubenbaezrivera@gmail.com 	 #
+# Franz Paccha	        franzpaccha@gmail.com    #
+##################################################
+# Tema: 				        				 #
+# suma de colores mediante opencv				 #
+# 												 #
+##################################################
+
+#Import packages needed
+
 import cv2
 import sys
 import numpy as np
 from time import time
 from time import clock
-#abrir la webcam
-#cap=cv2.VideoCapture(0)
 centroPantalla = (315, 80)
 centroPantallaMensaje = (150, 300)
 salirPantalla=(675, 470)
@@ -108,18 +123,9 @@ while varfinal <= 1:
 
 	#arriba[y_offset:y_offset+img1.shape[0], x_offset:x_offset+img1.shape[1]] = img1
 
-	
-	#cv2.rectangle(imagen, (bdy+100+altura,bdx-150+base), (bdy-50+altura,bdx+base),(255,0,0), 2) #up  150x150 pxls
-	#cv2.rectangle(imagen, (bdy+100+altura,bdx+150+base ), (bdy-50+altura,bdx+300+base),(255,0,0), 2) #dowm 150x150 pxls
-	#cv2.rectangle(imagen, (bdy-50+altura,bdx+base), (bdy-200+altura,bdx+150+base),(255,0,0), 2) #left 150x150 pxls
-	#cv2.rectangle(imagen, (bdy+250+altura,bdx+base), (bdy+100+altura,bdx+150+base),(255,0,0), 2) #rigth 150x150 pxls
 	cv2.rectangle(imagen, (bdy+505+altura,bdx+260+base), (bdy+405+altura,bdx+160+base),(0,0,255), 2) #exit 100x100 pxls
 	#cv2.rectangle(imagen, (bdy-300+altura,bdx+base+200 ), (bdy-200+altura,bdx+base+300),(255,0,0), 2) #Restar  100x100 pxls
 	hsv = cv2.cvtColor(imagen1, cv2.COLOR_BGR2HSV)
-
-    #Show the video
-	#cv2.rectangle(imagen,(550,150),(280,30),(0,0,0),2)
-	#cv2.imshow('Camara', imagen)
 
 	#convertir a bgr de HSV
 	hsv=cv2.cvtColor(imagen1,cv2.COLOR_BGR2HSV)
@@ -182,8 +188,6 @@ while varfinal <= 1:
 				#print('tuculito')
 				exit()
 
-
-
 			if x < 550 and y < 150:
 				#cv2.putText(img1, "Amarillo. Tienes 3 puntos.", centroPantallaMensaje, cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255, 255, 255), 4)
 				print('inicia el tiempo')
@@ -210,8 +214,7 @@ while varfinal <= 1:
 					tiempo_final = time()  
 					tb = b
 				cv2.putText(imagen, "La suma es: "+str(suma), centroPantallaMensaje, cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255, 255, 255), 4)
-			
-				
+					
 	i=0
 
 	#en caso de que sea azul
@@ -234,11 +237,6 @@ while varfinal <= 1:
 			if x < 550 and y < 150:
 				#cv2.putText(imagen1, "Azul. Tienes 3 puntos.", centroPantallaMensaje, cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255, 255, 255), 4)
 				print('inicia el tiempo')
-				#tiempo_inicial = time() 
-				#tiempo_final = time()  
-				#tiempo_ejecucion = (tiempo_final - tiempo_inicial)* 1000
-				#print(tiempo_ejecucion)
-				#if int(tiempo_ejecucion) > 5:
 				print(int(b))
 				if b - tb > 3:
 					print('cada 3 segundos azul')
@@ -278,11 +276,6 @@ while varfinal <= 1:
 			if x < 550 and y < 150:
 				#cv2.putText(imagen1, "Amarillo. Tienes 3 puntos.", centroPantallaMensaje, cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255, 255, 255), 4)
 				print('inicia el tiempo')
-				#tiempo_inicial = time() 
-				#tiempo_final = time()  
-				#tiempo_ejecucion = (tiempo_final - tiempo_inicial)* 1000
-				#print(tiempo_ejecucion)
-				#if int(tiempo_ejecucion) > 5:
 				print(int(b))
 				if b - tb > 3:
 					print('cada 3 segundos amarillo')
@@ -319,11 +312,6 @@ while varfinal <= 1:
 		if b - tb > 3:
 			cv2.putText(salirmam, "Preparate segundo nivel!!", (150, 200), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 0), 2)
 			cv2.imshow('Imagen', salirmam)
-			
-	
-	#cv2.imshow("Color azul",blue)
-
-	#cv2.imshow("Juego",imagen1)
 	#cv2.imshow("red",res)
 	if cv2.waitKey(10) & 0xFF == ord('q'):
     		#cap.release()
@@ -344,21 +332,9 @@ while varfinal <= 2:
 	imagen = cv2.add(imagen1,dire)    
 	salirmami=cv2.imread("images/nivel3.jpg")
 
-
-	#arriba[y_offset:y_offset+img1.shape[0], x_offset:x_offset+img1.shape[1]] = img1
-
-	
-	#cv2.rectangle(imagen, (bdy+100+altura,bdx-150+base), (bdy-50+altura,bdx+base),(255,0,0), 2) #up  150x150 pxls
-	#cv2.rectangle(imagen, (bdy+100+altura,bdx+150+base ), (bdy-50+altura,bdx+300+base),(255,0,0), 2) #dowm 150x150 pxls
-	#cv2.rectangle(imagen, (bdy-50+altura,bdx+base), (bdy-200+altura,bdx+150+base),(255,0,0), 2) #left 150x150 pxls
-	#cv2.rectangle(imagen, (bdy+250+altura,bdx+base), (bdy+100+altura,bdx+150+base),(255,0,0), 2) #rigth 150x150 pxls
 	cv2.rectangle(imagen, (bdy+505+altura,bdx+260+base), (bdy+405+altura,bdx+160+base),(0,0,255), 2) #exit 100x100 pxls
 	#cv2.rectangle(imagen, (bdy-300+altura,bdx+base+200 ), (bdy-200+altura,bdx+base+300),(255,0,0), 2) #Restar  100x100 pxls
 	hsv = cv2.cvtColor(imagen1, cv2.COLOR_BGR2HSV)
-
-    #Show the video
-	#cv2.rectangle(imagen,(550,150),(280,30),(0,0,0),2)
-	#cv2.imshow('Camara', imagen)
 
 	#convertir a bgr de HSV
 	hsv=cv2.cvtColor(imagen1,cv2.COLOR_BGR2HSV)
@@ -419,13 +395,7 @@ while varfinal <= 2:
 
 
 			if x < 550 and y < 150:
-				#cv2.putText(img1, "Amarillo. Tienes 3 puntos.", centroPantallaMensaje, cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255, 255, 255), 4)
 				print('inicia el tiempo')
-				#tiempo_inicial = time() 
-				#tiempo_final = time()  
-				#tiempo_ejecucion = (tiempo_final - tiempo_inicial)* 1000
-				#print(tiempo_ejecucion)
-				#if int(tiempo_ejecucion) > 5:
 				print(int(b))
 				if b - tb > 3:
 					print('cada 3 segundos amarillo')
@@ -468,11 +438,6 @@ while varfinal <= 2:
 			if x < 550 and y < 150:
 				#cv2.putText(imagen1, "Azul. Tienes 3 puntos.", centroPantallaMensaje, cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255, 255, 255), 4)
 				print('inicia el tiempo')
-				#tiempo_inicial = time() 
-				#tiempo_final = time()  
-				#tiempo_ejecucion = (tiempo_final - tiempo_inicial)* 1000
-				#print(tiempo_ejecucion)
-				#if int(tiempo_ejecucion) > 5:
 				print(int(b))
 				if b - tb > 3:
 					print('cada 3 segundos azul')
@@ -512,11 +477,6 @@ while varfinal <= 2:
 			if x < 550 and y < 150:
 				#cv2.putText(imagen1, "Amarillo. Tienes 3 puntos.", centroPantallaMensaje, cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255, 255, 255), 4)
 				print('inicia el tiempo')
-				#tiempo_inicial = time() 
-				#tiempo_final = time()  
-				#tiempo_ejecucion = (tiempo_final - tiempo_inicial)* 1000
-				#print(tiempo_ejecucion)
-				#if int(tiempo_ejecucion) > 5:
 				print(int(b))
 				if b - tb > 3:
 					print('cada 3 segundos amarillo')
@@ -572,21 +532,10 @@ while varfinal <= 3:
 	salirmami=cv2.imread("images/nivel2.jpg")
 	salirfinal=cv2.imread("images/final.jpg")
 
-
-	#arriba[y_offset:y_offset+img1.shape[0], x_offset:x_offset+img1.shape[1]] = img1
-
-	
-	#cv2.rectangle(imagen, (bdy+100+altura,bdx-150+base), (bdy-50+altura,bdx+base),(255,0,0), 2) #up  150x150 pxls
-	#cv2.rectangle(imagen, (bdy+100+altura,bdx+150+base ), (bdy-50+altura,bdx+300+base),(255,0,0), 2) #dowm 150x150 pxls
-	#cv2.rectangle(imagen, (bdy-50+altura,bdx+base), (bdy-200+altura,bdx+150+base),(255,0,0), 2) #left 150x150 pxls
-	#cv2.rectangle(imagen, (bdy+250+altura,bdx+base), (bdy+100+altura,bdx+150+base),(255,0,0), 2) #rigth 150x150 pxls
 	cv2.rectangle(imagen, (bdy+505+altura,bdx+260+base), (bdy+405+altura,bdx+160+base),(0,0,255), 2) #exit 100x100 pxls
 	#cv2.rectangle(imagen, (bdy-300+altura,bdx+base+200 ), (bdy-200+altura,bdx+base+300),(255,0,0), 2) #Restar  100x100 pxls
 	hsv = cv2.cvtColor(imagen1, cv2.COLOR_BGR2HSV)
 
-    #Show the video
-	#cv2.rectangle(imagen,(550,150),(280,30),(0,0,0),2)
-	#cv2.imshow('Camara', imagen)
 
 	#convertir a bgr de HSV
 	hsv=cv2.cvtColor(imagen1,cv2.COLOR_BGR2HSV)
@@ -696,11 +645,6 @@ while varfinal <= 3:
 			if x < 550 and y < 150:
 				#cv2.putText(imagen1, "Azul. Tienes 3 puntos.", centroPantallaMensaje, cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255, 255, 255), 4)
 				print('inicia el tiempo')
-				#tiempo_inicial = time() 
-				#tiempo_final = time()  
-				#tiempo_ejecucion = (tiempo_final - tiempo_inicial)* 1000
-				#print(tiempo_ejecucion)
-				#if int(tiempo_ejecucion) > 5:
 				print(int(b))
 				if b - tb > 3:
 					print('cada 3 segundos azul')
@@ -740,11 +684,6 @@ while varfinal <= 3:
 			if x < 550 and y < 150:
 				#cv2.putText(imagen1, "Amarillo. Tienes 3 puntos.", centroPantallaMensaje, cv2.FONT_HERSHEY_SIMPLEX, 1.5, (255, 255, 255), 4)
 				print('inicia el tiempo')
-				#tiempo_inicial = time() 
-				#tiempo_final = time()  
-				#tiempo_ejecucion = (tiempo_final - tiempo_inicial)* 1000
-				#print(tiempo_ejecucion)
-				#if int(tiempo_ejecucion) > 5:
 				print(int(b))
 				if b - tb > 3:
 					print('cada 3 segundos amarillo')
