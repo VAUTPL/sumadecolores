@@ -22,7 +22,7 @@ Sum of colors with openCV and python
 # Installation
 First you must install the following libraries on your computer
 
-   - [OpenCV](http://opencv.org/) version 2.8.10+ 
+   - [OpenCV](http://opencv.org/) version 3.2.0 
    - [Python](https://www.python.org/) 2.7.10 to 3.0) 
    - [Numpy](http://www.numpy.org/) 1.8.0 
 
