@@ -1,3 +1,19 @@
+
+##################################################
+#     UNIVERSIDAD TECNICA PARTICULAR DE LOJA     #
+##################################################
+# Profesor:            	Rodrigo Barba   	       #
+# Rodrigo Barba	     	lrbarba@utpl.edu.ec      #
+##################################################
+# Estudiante:				                         #
+# Ruben Baez     	rubenbaezrivera@gmail.com      # 
+# Franz Paccha	        franzpaccha@gmail.com     #
+##################################################
+# Tema: 				       	                      #
+# suma de colores mediante opencv		          #
+##################################################
+
+#Import packages needed
 import pygame, sys,os
 from pygame.locals import * 
 pygame.init()
